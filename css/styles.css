@@ -28,9 +28,9 @@ li {
 }
 
 body {
-    background-image: url(./assets/images/background.jpg);
+    background-image: url('../assets/images/background.jpg');
     background-size: cover;
-    height: 1000px;
+
     position: relative;
     margin: 0;
     padding: 0;
@@ -39,7 +39,6 @@ body {
 
 footer {
     background-color: black;
-    position: absolute;
     bottom: 0;
     width: 100%;
     color: aliceblue;
@@ -74,7 +73,7 @@ i {
 }
 
 #home {
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -83,6 +82,7 @@ h1 {
     color: rgb(215, 57, 57);
     font-size: 45px;
     font-family: 'Nosifer', 'cursive';
+    padding: 0px 100px;
 }
 
 h2 {
@@ -98,6 +98,10 @@ p {
 
 .book {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 
+.book-text {
+    width: 50%;
 }
