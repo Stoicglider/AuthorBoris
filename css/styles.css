@@ -121,9 +121,9 @@ p {
 }
 
 .BB {
-    max-width: 403.37px;
-    max-height: 400px;
-    padding-right: 50px;
+    width: 40%;
+    height: 40%;
+    min-width: 250px;
 }
 
 .text {
@@ -172,5 +172,11 @@ p {
 
     .footerdiv {
         padding-left: 10px;
+    }
+
+    #about {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        margin-top: 50px;
     }
 }
