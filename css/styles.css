@@ -3,6 +3,7 @@
     width: 100px;
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
+    margin-right: 10px;
 
 }
 
@@ -152,6 +153,10 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
 
+}
+
+#free-book {
+    margin-bottom: 150px;
 }
 
 @media only screen and (max-width: 571px) {
