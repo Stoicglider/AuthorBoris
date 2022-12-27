@@ -1,5 +1,5 @@
-html{
-    height:100%;
+html {
+    min-height: 100%;
 }
 
 .logo {
@@ -40,12 +40,13 @@ li:hover {
 body {
     background-image: url('../assets/images/background.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     color: aliceblue;
-    min-height: 100%;
     position: relative;
     display: block;
+    height: 100vh;
 }
 
 footer {
@@ -148,6 +149,8 @@ p {
     color: rgb(215, 57, 57);
     font-size: 35px;
     font-family: 'Nosifer', 'cursive';
+    padding-left: 100px;
+    padding-bottom: 0px;
 }
 
 #books {
@@ -170,11 +173,11 @@ p {
     margin-bottom: 150px;
 }
 
-.pages-container{
+.pages-container {
     padding-bottom: 150px;
 }
 
-a{
+a {
     color: aliceblue;
 }
 
@@ -197,4 +200,52 @@ a{
         justify-content: center;
         margin-top: 50px;
     }
+}
+
+#contacts {
+    width: 80%;
+    margin: auto;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: rgb(215, 57, 57);
+    font-family: 'Nosifer', 'cursive';
+    font-size: 20px;
+}
+
+form {
+    width: fit-content;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+textarea {
+    height: 50px;
+    resize: none;
+
+}
+
+input,
+textarea {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 150px;
+    margin: auto;
+    background-color: rgb(215, 57, 57);
+    color: aliceblue;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 25px;
+
 }
