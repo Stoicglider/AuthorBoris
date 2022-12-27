@@ -8,7 +8,11 @@ let homeButton = document.getElementById('home-button');
 let aboutButton = document.getElementById('about-button');
 let booksButton = document.getElementById('books-button');
 let freeBookButton = document.getElementById('free-book-button');
-let contactButton = document.getElementById('contact-button')
+let contactButton = document.getElementById('contact-button');
+
+
+
+
 
 about.style.display = 'none';
 books.style.display = 'none';
@@ -25,7 +29,7 @@ let red = '1px solid red';
 
 homeButton.addEventListener('click', () => {
     homeButton.style.borderBottom = red;
-    document.querySelector('h1').style.display = 'block';
+    document.querySelector('h1').innerHTML = 'Horror stories that will keep you up at night';
     home.style.marginBottom = '0px';
     aboutButton.style.borderBottom = none;
     booksButton.style.borderBottom = none;
@@ -74,7 +78,7 @@ freeBookButton.addEventListener('click', () => {
     freeBookButton.style.borderBottom = red;
     contactButton.style.borderBottom = none;
     home.style.display = block;
-    document.querySelector('h1').style.display = 'none';
+    document.querySelector('h1').innerHTML = 'Get a free book';
     home.style.marginBottom = '150px';
     about.style.display = none;
     books.style.display = none;
@@ -84,12 +88,13 @@ freeBookButton.addEventListener('click', () => {
 })
 contactButton.addEventListener('click', () => {
     homeButton.style.borderBottom = none;
-    aboutButton.style.borderButton = none;
-    booksButton.style.borderButton = none;
-    freeBookButton.style.borderButton = none;
+    aboutButton.style.borderBottom = none;
+    booksButton.style.borderBottom = none;
+    freeBookButton.style.borderBottom = none;
     contactButton.style.borderBottom = red;
     home.style.display = none;
     about.style.display = none;
     books.style.display = none;
     contact.style.display = block;
 })
+
