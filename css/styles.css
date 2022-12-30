@@ -62,7 +62,7 @@ footer {
 }
 
 a:visited {
-    color: aliceblue;
+    color: rgb(215, 57, 57);
 }
 
 .email {
@@ -73,7 +73,7 @@ a:visited {
     display: flex;
     justify-content: space-between;
     padding: 50px 100px;
-    font-size: 25px;
+    font-size: 18px;
     flex-wrap: wrap;
 }
 
@@ -83,10 +83,12 @@ i {
 
 .button {
     padding: 20px;
-    background-color: rgb(215, 57, 57);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
+    color: rgb(215, 57, 57);
+
 }
 
 #home {
@@ -176,7 +178,8 @@ p {
 }
 
 a {
-    color: aliceblue;
+    color: rgb(215, 57, 57);
+    font-family: 'Nosifer', 'cursive';
 }
 
 @media only screen and (max-width: 571px) {
