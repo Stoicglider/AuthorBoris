@@ -1,3 +1,6 @@
+*{
+    max-width: 100%;
+}
 html {
     min-height: 100%;
 }
@@ -107,6 +110,7 @@ h1 {
 
 h2 {
     font-size: 35px;
+    font-family: 'Nosifer', 'cursive';
 
 }
 
@@ -264,10 +268,7 @@ button[disabled]:hover {
     color: rgb(31, 27, 27);
 }
 
-header {
-    font size-adjust: right;
-    
-}
+
 
 @media only screen and (max-width: 768px) {
 
@@ -298,6 +299,12 @@ header {
     .text {
         padding: 20px;
     }
+    .img-container{
+        max-width: 70%;
+    }
+    a{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -325,12 +332,16 @@ header {
     .text {
         padding: 10px;
     }
+    .img-container{
+        max-width: 90%;
+    }
 }
+
 .initial-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: black;
     display: flex;
@@ -339,15 +350,10 @@ header {
     opacity: 1;
     transition: opacity 1s ease-in-out;
     z-index: 1000;
-  }
-  
-  .overlay-content {
-    text-align: center;
-    color: white;
-    padding: 20px;
-  }
-  
-  #start-button {
+}
+
+
+#start-button {
     padding: 10px 20px;
     background-color: rgb(215, 57, 57);
     color: white;
@@ -355,18 +361,97 @@ header {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-  }
-  
-  #start-button:hover {
+}
+
+#start-button:hover {
     background-color: rgb(190, 50, 50);
-  }
-  .overlay-logo {
+}
+
+.overlay-logo {
     display: block;
-    margin: 0 auto 20px; 
-    max-width: 250px; 
+    margin: 0 auto 20px;
+    max-width: 250px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid white;
 }
 
- 
+
+  .overlay-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.img-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.grass {
+    max-width: 70%;
+    width: 100%;
+    position: absolute;
+    bottom:0;
+}
+
+.hand-container{
+  width: 100%;
+  height: 30vw;
+  position: relative;
+  bottom: 10vw;
+  overflow: hidden;
+  
+
+}
+
+.hand {
+    width: 30%;
+    max-width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    animation: revealHand 5s ease-in-out forwards, shake 0.5s 9;
+    
+
+}
+@keyframes revealHand {
+    0% {
+      bottom: -22vw; /* Start hidden below the container */
+      opacity: 0; /* Initially hidden */
+    }
+    100% {
+      bottom: 0px; /* Move to its original position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(-50%);
+    }
+    10%, 90% {
+      transform: translateX(calc(-50% - 3px));
+    }
+    20%, 80% {
+      transform: translateX(calc(-50% + 3px));
+    }
+    30%, 70% {
+      transform: translateX(calc(-50% - 2px));
+    }
+    40%, 60% {
+      transform: translateX(calc(-50% + 2px));
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
