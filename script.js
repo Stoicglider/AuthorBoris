@@ -1,4 +1,3 @@
-// Get DOM elements
 const pages = {
   home: document.getElementById("home"),
   about: document.getElementById("about"),
@@ -14,13 +13,11 @@ const buttons = {
   contact: document.getElementById("contact-button"),
 };
 
-// Initial page display
 pages.about.style.display = "none";
 pages.books.style.display = "none";
 pages.home.style.display = "block";
 pages.contact.style.display = "none";
 
-// Event listeners for navigation buttons
 function handleButtonClick(targetPage, button) {
   Object.values(buttons).forEach((btn) => {
     btn.style.borderBottom = "none";
@@ -67,5 +64,5 @@ startButton.addEventListener("click", () => {
   overlay.style.opacity = 0;
   setTimeout(() => {
     overlay.style.display = "none";
-  }, 1000); // Adjust the timing to match your transition duration
+  }, 1000);
 });
