@@ -1,100 +1,71 @@
+// Get DOM elements
+const pages = {
+  home: document.getElementById("home"),
+  about: document.getElementById("about"),
+  books: document.getElementById("books"),
+  contact: document.getElementById("contact"),
+};
 
+const buttons = {
+  home: document.getElementById("home-button"),
+  about: document.getElementById("about-button"),
+  books: document.getElementById("books-button"),
+  freeBook: document.getElementById("free-book-button"),
+  contact: document.getElementById("contact-button"),
+};
 
-let home = document.getElementById('home');
-let about = document.getElementById('about');
-let books = document.getElementById('books');
-let contact = document.getElementById('contact')
-let homeButton = document.getElementById('home-button');
-let aboutButton = document.getElementById('about-button');
-let booksButton = document.getElementById('books-button');
-let freeBookButton = document.getElementById('free-book-button');
-let contactButton = document.getElementById('contact-button');
+// Initial page display
+pages.about.style.display = "none";
+pages.books.style.display = "none";
+pages.home.style.display = "block";
+pages.contact.style.display = "none";
 
+// Event listeners for navigation buttons
+function handleButtonClick(targetPage, button) {
+  Object.values(buttons).forEach((btn) => {
+    btn.style.borderBottom = "none";
+  });
 
+  button.style.borderBottom = "1px solid red";
 
+  Object.values(pages).forEach((page) => {
+    page.style.display = "none";
+  });
 
+  pages[targetPage].style.display = "block";
 
-about.style.display = 'none';
-books.style.display = 'none';
-home.style.display = 'block';
-homeButton.style.borderBottom = "1px solid red";
-contact.style.display = 'none';
+  if (targetPage === "home") {
+    document.querySelector("h1").innerHTML =
+      "Horror stories that will keep you up at night";
+    pages.home.style.marginBottom = "0";
+  } else if (targetPage === "freeBook") {
+    document.querySelector("h1").innerHTML = "Get a free book";
+    pages.home.style.marginBottom = "150px";
+  }
+}
 
-//styles
-let none = 'none';
-let block = 'block';
-let flex = 'flex';
-let red = '1px solid red';
+buttons.home.addEventListener("click", () =>
+  handleButtonClick("home", buttons.home)
+);
+buttons.about.addEventListener("click", () =>
+  handleButtonClick("about", buttons.about)
+);
+buttons.books.addEventListener("click", () =>
+  handleButtonClick("books", buttons.books)
+);
+buttons.freeBook.addEventListener("click", () =>
+  handleButtonClick("home", buttons.freeBook)
+);
+buttons.contact.addEventListener("click", () =>
+  handleButtonClick("contact", buttons.contact)
+);
 
+const overlay = document.getElementById("initial-overlay");
+const startButton = document.getElementById("start-button");
 
-homeButton.addEventListener('click', () => {
-    homeButton.style.borderBottom = red;
-    document.querySelector('h1').innerHTML = 'Horror stories that will keep you up at night';
-    home.style.marginBottom = '0px';
-    aboutButton.style.borderBottom = none;
-    booksButton.style.borderBottom = none;
-    freeBookButton.style.borderBottom = none;
-    contactButton.style.borderBottom = none;
-    home.style.display = block;
-    about.style.display = none;
-    books.style.display = none;
-    contact.style.display = none;
-
-
-})
-
-aboutButton.addEventListener('click', () => {
-    homeButton.style.borderBottom = none;
-    aboutButton.style.borderBottom = red;
-    booksButton.style.borderBottom = none;
-    freeBookButton.style.borderBottom = none;
-    contactButton.style.borderBottom = none;
-    home.style.display = none;
-    about.style.display = flex;
-    books.style.display = none;
-    contact.style.display = none;
-
-})
-
-booksButton.addEventListener('click', () => {
-    homeButton.style.borderBottom = none;
-    aboutButton.style.borderBottom = none;
-    booksButton.style.borderBottom = red;
-    freeBookButton.style.borderBottom = none;
-    contactButton.style.borderBottom = none;
-    home.style.display = none;
-    about.style.display = none;
-    books.style.display = block;
-    contact.style.display = none;
-
-
-
-
-})
-freeBookButton.addEventListener('click', () => {
-    homeButton.style.borderBottom = none;
-    aboutButton.style.borderBottom = none;
-    booksButton.style.borderBottom = none;
-    freeBookButton.style.borderBottom = red;
-    contactButton.style.borderBottom = none;
-    home.style.display = block;
-    document.querySelector('h1').innerHTML = 'Get a free book';
-    home.style.marginBottom = '150px';
-    about.style.display = none;
-    books.style.display = none;
-    contact.style.display = none;
-
-
-})
-contactButton.addEventListener('click', () => {
-    homeButton.style.borderBottom = none;
-    aboutButton.style.borderBottom = none;
-    booksButton.style.borderBottom = none;
-    freeBookButton.style.borderBottom = none;
-    contactButton.style.borderBottom = red;
-    home.style.display = none;
-    about.style.display = none;
-    books.style.display = none;
-    contact.style.display = block;
-})
-
+startButton.addEventListener("click", () => {
+  overlay.style.opacity = 0;
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 1000); // Adjust the timing to match your transition duration
+});

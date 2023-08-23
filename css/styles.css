@@ -38,7 +38,7 @@ li:hover {
 }
 
 body {
-    background-image: url('../assets/images/background.jpg');
+    background-image: url('../assets/images/sergiu-baica-5hCneY6YeFQ-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -263,3 +263,100 @@ button[disabled]:hover {
     background-color: gray;
     color: rgb(31, 27, 27);
 }
+
+header {
+    font size-adjust: right;
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .header-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: 75px;
+        width: 75px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 0px 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .text {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 0px 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+        padding: 0px 10px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .text {
+        padding: 10px;
+    }
+}
+.initial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .overlay-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  #start-button {
+    padding: 10px 20px;
+    background-color: rgb(215, 57, 57);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  #start-button:hover {
+    background-color: rgb(190, 50, 50);
+  }
